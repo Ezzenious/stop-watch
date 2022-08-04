@@ -43,4 +43,17 @@ button i {
   font-size: 2rem;
   padding: 10px;
   color: white;
+  width: 50px;
+}
+
+#play {
+  background-color: green;
+}
+
+#reset {
+  background-color: red;
+}
+
+#pause {
+  background-color: orange;
 }
