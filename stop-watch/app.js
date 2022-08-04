@@ -5,6 +5,8 @@ let seconds = 0;
 let minutes = 0;
 let hours = 0;
 
+let diplayTimer = document.getElementById("timer");
+
 function stopWatch() {
   seconds++;
 
@@ -13,8 +15,10 @@ function stopWatch() {
     minutes++;
 
     if (minutes / 60 === 1) {
-        minutes = 0;
-        hours++;
+      minutes = 0;
+      hours++;
     }
   }
+
+  diplayTimer.innerText = hours + ":" + minutes + ":" + seconds;
 }
