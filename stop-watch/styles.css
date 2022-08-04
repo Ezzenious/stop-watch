@@ -28,3 +28,19 @@ body {
   margin: 0px auto;
   padding: 35px;
 }
+
+.buttons {
+  text-align: center;
+}
+
+button {
+  margin: 0px 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+button i {
+  font-size: 2rem;
+  padding: 10px;
+  color: white;
+}
