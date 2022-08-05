@@ -32,7 +32,16 @@ function stopWatch() {
     displayedHours + ":" + displayedMinutes + ":" + displayedSeconds;
 }
 
-window.setInterval(stopWatch, 1000);
+startStopBtn.addEventListener("click", () => {
+  window.setInterval(stopWatch, 1000);
+});
+
+resetBtn.addEventListener("click", () => {
+  displayTimer.innerText = "00:00:00";
+  seconds = 0;
+  minutes = 0;
+  hours = 0;
+});
 
 function convertTimer(num, time) {
   if (num < 10) {
