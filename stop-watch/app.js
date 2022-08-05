@@ -5,7 +5,7 @@ let seconds = 0;
 let minutes = 0;
 let hours = 0;
 
-let diplayTimer = document.getElementById("timer");
+let displayTimer = document.getElementById("timer");
 
 function stopWatch() {
   seconds++;
@@ -20,5 +20,19 @@ function stopWatch() {
     }
   }
 
-  diplayTimer.innerText = hours + ":" + minutes + ":" + seconds;
+  seconds = convertTimer(seconds);
+  minutes = convertTimer(minutes);
+  hours = convertTimer(hours);
+
+  displayTimer.innerText = hours + ":" + minutes + ":" + seconds;
+}
+
+window.setInterval(stopWatch, 1000);
+
+function convertTimer(num) {
+  let time = 0;
+  if (num < 10) {
+    time = "0" + num.toString();
+  }
+  return time;
 }
