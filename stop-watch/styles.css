@@ -36,7 +36,6 @@ body {
 button {
   margin: 0px 10px;
   border: none;
-  border-radius: 5px;
 }
 
 button i {
@@ -44,6 +43,7 @@ button i {
   padding: 10px;
   color: white;
   width: 50px;
+  border-radius: 5px;
 }
 
 #play {
@@ -56,4 +56,27 @@ button i {
 
 #pause {
   background-color: orange;
+}
+#play:hover {
+  background-color: hsl(120, 100%, 20%);
+}
+
+#reset:hover {
+  background-color: hsl(0, 100%, 45%);
+}
+
+#pause:hover {
+  background-color: hsl(39, 100%, 45%);
+}
+
+#play:active {
+  background-color: hsl(120, 100%, 15%);
+}
+
+#reset:active {
+  background-color: hsl(0, 100%, 40%);
+}
+
+#pause:active {
+  background-color: hsl(39, 100%, 40%);
 }
