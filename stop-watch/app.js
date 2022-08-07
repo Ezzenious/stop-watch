@@ -32,11 +32,27 @@ function stopWatch() {
     displayedHours + ":" + displayedMinutes + ":" + displayedSeconds;
 }
 
+let timerInterval = null;
+let timerStarted = false;
+
 startStopBtn.addEventListener("click", () => {
-  window.setInterval(stopWatch, 1000);
+  if (!timerStarted) {
+    startStopBtn.innerHTML = '<i class="fa-solid fa-pause" id="pause"></i>';
+    timerInterval = window.setInterval(stopWatch, 1000);
+    timerStarted = true;
+  } else {
+    startStopBtn.innerHTML = '<i class="fa-solid fa-play" id="play"></i>';
+    clearInterval(timerInterval);
+    timerStarted = false;
+  }
 });
 
 resetBtn.addEventListener("click", () => {
+  if (timerStarted) {
+    startStopBtn.innerHTML = '<i class="fa-solid fa-play" id="play"></i>';
+    clearInterval(timerInterval);
+    timerStarted = false;
+  }
   displayTimer.innerText = "00:00:00";
   seconds = 0;
   minutes = 0;
